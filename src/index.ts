@@ -1,3 +1,4 @@
+import { DatabaseModule } from "@faker-js/faker";
 import "./style.css";
 class Car {
   constructor(
@@ -96,7 +97,7 @@ console.log(car1);
 console.log(car2);
 console.log(car3);
 
-console.log("-----------------------MOSHINA KIRISH-----------------------------------------");
+// console.log("-----------------------MOSHINA KIRISH-----------------------------------------");
 
 parking1.enterCar(car1);
 parking2.enterCar(car2);
@@ -130,32 +131,38 @@ function main() {
 
 	// Simulating user input for car type
 	// const carType = prompt('Enter the car type:');
-	console.log("-----------------------MOSHINANI ketishi-----------------------------------------");
+	// console.log("-----------------------MOSHINANI ketishi-----------------------------------------");
+	console.log("-----------------------MOSHINANI kirishi-----------------------------------------");
 
-	console.log(`Car name: ${car2.nameCar}`);
-	console.log(`Enter time: ${parking.getEnterTime()}`);
-	setTimeout(() => {
-		const timeElapsed = parking.calculateTimeElapsed();
-		console.log(`Time elapsed (seconds): ${timeElapsed}`);
-		console.log(`Time pricing ${timeElapsed * 5}$`)
-}, 5000);
-	console.log(`Car name: ${car1.nameCar}`);
-	console.log(`Enter time: ${parking.getEnterTime()}`);
-	setTimeout(() => {
-		const timeElapsed = parking.calculateTimeElapsed();
-		console.log(`Time elapsed (seconds): ${timeElapsed}`);
-		console.log(`Time pricing ${timeElapsed * 5}$`)
-}, 5000);
-	console.log(`Car name: ${car3.nameCar}`);
-	console.log(`Enter time: ${parking.getEnterTime()}`);
-	setTimeout(() => {
-		const timeElapsed = parking.calculateTimeElapsed();
-		console.log(`${car3}Time  (seconds): ${timeElapsed}`);
-		console.log(`Time pricing ${timeElapsed * 5}$`)
-}, 5000);
+	console.log(` ${car2.nameCar}`);
+	console.log(`Kirish vaqati: ${parking.getEnterTime()}`);
+
+	console.log(` ${car1.nameCar}`);
+	console.log(`Kirish vaqti: ${parking.getEnterTime()}`);
+
+	console.log(` ${car3.nameCar}`);
+	console.log(` kirish vaqti: ${parking.getEnterTime()}`);
+
 
 	// Simulating some time passing
 	// In a real project, you would use your own logic to determine when to calculate the time elapsed
+	console.log("-----------------------MOSHINANI Ketishi-----------------------------------------");
+
+  setTimeout(() => {
+		const timeElapsed = parking.calculateTimeElapsed();
+		console.log(`BYD Ketish vaqti: ${parking.getEnterTime()}`);
+		console.log(`Jami hisob: ${timeElapsed * 2}$`)
+}, 2500);
+  setTimeout(() => {
+		const timeElapsed = parking.calculateTimeElapsed();
+		console.log(` Kia Ketish vaqti: ${parking.getEnterTime() }`);
+		console.log(`Jami Hisobda: ${timeElapsed * 2}$`)
+}, 1300);
+	setTimeout(() => {
+			const timeElapsed = parking.calculateTimeElapsed();
+			console.log(`Toyota Ketish vaqti: ${parking.getEnterTime()}`);
+			console.log(`Jami Hisob ${timeElapsed * 2}$`)
+	}, 2100);
 
 // const value = timeElapsed.value;
 
