@@ -3,7 +3,7 @@ import "./style.css";
 class Car {
   constructor(
     public nameCar: string,
-    public tire: 4, // mashina baloni
+    public tire: 4, 
     public color: string,
     public priceCar: string
   ) {}
@@ -69,8 +69,7 @@ class Parking<T extends Car> {
   }
 
   calculateTotalPricePerCar(car: T) {
-    // const pricePerMinute = this.pricing.electroCarPricePerMinute;
-    // return this.calculateMinutes() * pricePerMinute;
+
   }
 
   calculateMinutes() {}
@@ -97,7 +96,6 @@ console.log(car1);
 console.log(car2);
 console.log(car3);
 
-// console.log("-----------------------MOSHINA KIRISH-----------------------------------------");
 
 parking1.enterCar(car1);
 parking2.enterCar(car2);
@@ -122,16 +120,13 @@ class Parkinged{
 	calculateTimeElapsed(): number {
 			const currentTime = new Date();
 			const timeDiff = currentTime.getTime() - this.enterTime.getTime();
-			return Math.floor(timeDiff / 1000); // Convert milliseconds to seconds
+			return Math.floor(timeDiff / 1000);
 	}
 }
 
 function main() {
 	const parking = new Parkinged();
 
-	// Simulating user input for car type
-	// const carType = prompt('Enter the car type:');
-	// console.log("-----------------------MOSHINANI ketishi-----------------------------------------");
 	console.log("-----------------------MOSHINANI kirishi-----------------------------------------");
 
 	console.log(` ${car2.nameCar}`);
@@ -144,9 +139,7 @@ function main() {
 	console.log(` kirish vaqti: ${parking.getEnterTime()}`);
 
 
-	// Simulating some time passing
-	// In a real project, you would use your own logic to determine when to calculate the time elapsed
-	console.log("-----------------------MOSHINANI Ketishi-----------------------------------------");
+		console.log("-----------------------MOSHINANI Ketishi-----------------------------------------");
 
   setTimeout(() => {
 		const timeElapsed = parking.calculateTimeElapsed();
@@ -164,14 +157,9 @@ function main() {
 			console.log(`Jami Hisob ${timeElapsed * 2}$`)
 	}, 2100);
 
-// const value = timeElapsed.value;
-
-	// console.log(`Time price ${ * 5 }`)
 }
 
 
 main();
 const result = main();
 console.log(result);
-
-// const fri = getEnterTime();
