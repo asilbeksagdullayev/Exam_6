@@ -1,0 +1,10 @@
+body{
+ background-color: rgba(0, 217, 255, 0.637);
+ display: grid;
+ place-items: center;
+ height: 100vh;
+ margin: 0;
+ padding: 0;
+ user-select: none;
+ background-image: url(../image/beach.jpg);
+}
